@@ -73,10 +73,11 @@ let maplocalleader = ",""设置快速编辑.vimrc文件 ,e 编辑.vimrc
 if has("win32")
     map <silent> <leader>e :e $VIM/_vimrc<cr>
 else
-    map <silent> <leader>e :e $VIM/.vimrc<cr>
+    map <silent> <leader>e :e $HOME/.vimrc<cr>
 endif
 "保存.vimrc文件后会自动调用新的.vimrc
 autocmd! bufwritepost _vimrc source $VIM/_vimrc
+autocmd! bufwritepost .vimrc source $HOME/.vimrc
 
 " =====================================================================
 " Multi_language setting default encoding UTF  
